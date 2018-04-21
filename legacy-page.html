@@ -1,14 +1,16 @@
 
 
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 <head>
 <meta http-equiv="Expires" content="Mon, 26 Jul 1997 05:00:00 GMT"></meta>
 <meta http-equiv="Last-Modified" content="Mon, 26 Jul 1997 05:00:00 GMT"></meta>
 <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate"></meta>
 <meta http-equiv="Pragma" content="no-cache"></meta>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
 	<title>BBVA Continental - Simulador de Pr&eacute;stamos</title>
 	<script type="text/javascript">(function(){var a=window;a.dT_?a.console&&a.console.log("Duplicate agent injection detected, turning off redundant initConfig."):window.dT_||(window.dT_={cfg:"tp=500,50,0,1|reportUrl=dynaTraceMonitor|agentUri=dt/dtagent_23deijmopqrstvx_6000500001289.js|auto=1|domain=grupobbva.pe|rid=RID_-784344247|rpid=359768508|app=#APP#"})})();(function(){function r(){var a=0;try{a=window.performance.timing.navigationStart+Math.floor(window.performance.now())}catch(b){}return 0>=a?(new Date).getTime():a}function Y(a,b){return Z(a,b)}function l(a,b){for(var c=1;c<arguments.length;c++)a.push(arguments[c])}function u(a,b){return parseInt(a,b||10)}function D(a){try{if(v)return v[a]}catch(b){}return null}function E(a,b){try{window.sessionStorage.setItem(a,b)}catch(c){}}function m(a,b){var c=-1;b&&(a&&a.indexOf)&&(c=a.indexOf(b));return c}function F(a){document.cookie=
 a+'="";path=/'+(d.domain?";domain="+d.domain:"")+"; expires=Thu, 01-Jan-70 00:00:01 GMT;"}function G(a){a=encodeURIComponent(a);var b=[];if(a)for(var c=0;c<a.length;c++){var k=a.charAt(c),d=$[k];d?l(b,d):l(b,k)}return b.join("")}function w(a,b,c){b||0==b?(b=(""+b).replace(/[;\n\r]/g,"_"),b="DTSA"===a.toUpperCase()?G(b):b,a=a+"="+b+";path=/"+(d.domain?";domain="+d.domain:""),c&&(a+=";expires="+c.toUTCString()),document.cookie=a):F(a)}function q(a){var b,c,k,d=document.cookie.split(";");for(b=0;b<d.length;b++)if(c=
@@ -83,19 +85,6 @@ A;e.latencyCookieName="dtLatC";e.cfg=d;var B=6E8,s=e.agentStartTime%B+"_"+u(1E3*
   	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />  	
   	<!-- El resto de hojas de estilo se cargan de manera dinamica -->
   	<style type="text/css">
-  		.ui-spinner {
-			/*width:96px;
-  			height:16px;
-			font-family:Arial, Helvetica, sans-serif;
-			font-size:13px;
-			color:#989898;
-			border-color: #467BBA;
-			border-bottom-right-radius: 0px;
-			border-top-right-radius: 0px;
-			border-bottom-left-radius: 0px;
-			border-top-left-radius: 0px;*/
-			/*margin-left: 10px;*/
-  		}
   		.ui-spinner input{
 			margin-left: 0px;
   		}
@@ -118,9 +107,6 @@ A;e.latencyCookieName="dtLatC";e.cfg=d;var B=6E8,s=e.agentStartTime%B+"_"+u(1E3*
   		}
   		.error_input_dinamico{
   			border-color: red !important;
-  		}
-  		input[type=checkbox],input[type=radio],select.input_dinamico{
-  			/*margin-left: 10px;*/
   		}
   		select.input_dinamico{
   			/*color: #989898;
@@ -159,9 +145,9 @@ A;e.latencyCookieName="dtLatC";e.cfg=d;var B=6E8,s=e.agentStartTime%B+"_"+u(1E3*
 </head>
 
 <body>
-<center>	
+<center class="center-content">	
 
-<div style="width: 1024px; position: relative; margin-left: auto; margin-right: auto; height:100%; ">
+<div style="max-width: 100%; position: relative; margin-left: auto; margin-right: auto; height:100%; ">
 	<div class="head">
         <div class="sub_head_left">
         	<img src="https://extranetperu.grupobbva.pe/SimuladorWeb1/resources/img/logo.jpg" width="223" height="60"/>
@@ -179,7 +165,7 @@ A;e.latencyCookieName="dtLatC";e.cfg=d;var B=6E8,s=e.agentStartTime%B+"_"+u(1E3*
     <div class="body">      
       <form name="formSimulador" id="formSimulador">
    	  <div class="body_head"><b>Préstamo De Consumo</b></div>
-        <div class="body_container" style="/*padding-top: 15px;*/">	
+        <div class="body_container">	
         	<input type="hidden" name="casoSimulacion" id="casoSimulacion" value="0"/>
         	<!-- rangos -->
         	<input type="hidden" name="cdSubProd" id="cdSubProd" class="datoValidador" value="0"/>
@@ -214,11 +200,11 @@ A;e.latencyCookieName="dtLatC";e.cfg=d;var B=6E8,s=e.agentStartTime%B+"_"+u(1E3*
         	<!-- fin -->
         	
         	<!-- TABLA DE CRITERIOS -->     	
-        	<table width="900" border="0" cellpadding="0" cellspacing="0" class="table">
+        	<table width="100%" border="0" cellpadding="0" cellspacing="0" class="table">
 				<tr> 
                     <td class="td_left celda_arriba">&iquest;Qu&eacute; producto desea consultar?</td>
                     <td class="td_right_col2 celda_arriba">
-                   		<select name="selectProducto" id="selectProducto" class="datoEntrada imput_cbobox_max2" style="/*padding:0 0 0 2px;*/">
+                   		<select name="selectProducto" id="selectProducto" class="datoEntrada imput_cbobox_max2">
                         
                         </select>
                     </td>
@@ -227,7 +213,7 @@ A;e.latencyCookieName="dtLatC";e.cfg=d;var B=6E8,s=e.agentStartTime%B+"_"+u(1E3*
                     <td class="td_left">&iquest;Cu&aacute;nto deseas solicitar?</td>
                     <td class="td_right_col2">
                       <input type="text" name="inputImporte" id="inputImporte" class="datoEntrada imput_text_medium" maxlength="16"/>
-                      <select name="selectMoneda" id="selectMoneda" class="datoEntrada imput_cbobox_min2" style="/*padding:0 0 0 2px;*/">
+                      <select name="selectMoneda" id="selectMoneda" class="datoEntrada imput_cbobox_min2">
                       
                       </select>
                     </td>
