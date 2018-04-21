@@ -45,6 +45,11 @@ body {
     line-height: 20px
 }
 
+input[type="checkbox"] {
+    width: 1.5em;
+    height: 1.5em;
+}
+
 .head {
     max-width: 100%;
     position: relative;
