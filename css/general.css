@@ -404,7 +404,7 @@ body {
 }
 
 .imput_cbobox_max2 {
-    width: 297px
+    width: 297px;
 }
 
 #calendary {
@@ -825,4 +825,21 @@ textarea {
   .center-content{
     margin: 0;
   }
+
+  .imput_cbobox_max2 {
+    width: 100%;
+  }
+
+  .imput_cbobox_min2 {
+    width: 100%;
+  }
+ 
+  input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 0;
+    height: 2.5em;
+    margin-bottom: 10px;
+  }
+
+
 }
