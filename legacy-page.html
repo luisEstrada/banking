@@ -1,0 +1,597 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Expires" content="Mon, 26 Jul 1997 05:00:00 GMT"></meta>
+<meta http-equiv="Last-Modified" content="Mon, 26 Jul 1997 05:00:00 GMT"></meta>
+<meta http-equiv="Cache-Control" content="no-cache, mustrevalidate"></meta>
+<meta http-equiv="Pragma" content="no-cache"></meta>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>BBVA Continental - Simulador de Pr&eacute;stamos</title>
+	<script type="text/javascript">(function(){var a=window;a.dT_?a.console&&a.console.log("Duplicate agent injection detected, turning off redundant initConfig."):window.dT_||(window.dT_={cfg:"tp=500,50,0,1|reportUrl=dynaTraceMonitor|agentUri=dt/dtagent_23deijmopqrstvx_6000500001289.js|auto=1|domain=grupobbva.pe|rid=RID_-784344247|rpid=359768508|app=#APP#"})})();(function(){function r(){var a=0;try{a=window.performance.timing.navigationStart+Math.floor(window.performance.now())}catch(b){}return 0>=a?(new Date).getTime():a}function Y(a,b){return Z(a,b)}function l(a,b){for(var c=1;c<arguments.length;c++)a.push(arguments[c])}function u(a,b){return parseInt(a,b||10)}function D(a){try{if(v)return v[a]}catch(b){}return null}function E(a,b){try{window.sessionStorage.setItem(a,b)}catch(c){}}function m(a,b){var c=-1;b&&(a&&a.indexOf)&&(c=a.indexOf(b));return c}function F(a){document.cookie=
+a+'="";path=/'+(d.domain?";domain="+d.domain:"")+"; expires=Thu, 01-Jan-70 00:00:01 GMT;"}function G(a){a=encodeURIComponent(a);var b=[];if(a)for(var c=0;c<a.length;c++){var k=a.charAt(c),d=$[k];d?l(b,d):l(b,k)}return b.join("")}function w(a,b,c){b||0==b?(b=(""+b).replace(/[;\n\r]/g,"_"),b="DTSA"===a.toUpperCase()?G(b):b,a=a+"="+b+";path=/"+(d.domain?";domain="+d.domain:""),c&&(a+=";expires="+c.toUTCString()),document.cookie=a):F(a)}function q(a){var b,c,k,d=document.cookie.split(";");for(b=0;b<d.length;b++)if(c=
+m(d[b],"="),k=d[b].substring(0,c),c=d[b].substring(c+1),k=k.replace(/^\s+|\s+$/g,""),k===a)return"DTSA"===a.toUpperCase()?decodeURIComponent(c):c;return""}function H(a){return/^[0-9A-Za-z_\$\+\/\.\-\*%\|]*$/.test(a)}function I(){var a=q(J);return a&&H(a)?a:""}function K(a){a=a||I();var b={sessionId:null,serverId:null};if(a){var c=m(a,"|"),d=a;-1!==c&&(d=a.substring(0,c));c=m(d,"$");-1!==c?(b.sessionId=d.substring(c+1),b.serverId=d.substring(0,c)):b.sessionId=d}return b}function aa(a){return K(a).serverId}
+function ba(a){if(a)return K(a).sessionId;if(a=e.gSC()){var b=a.indexOf("|");-1!==b&&(a=a.substring(0,b))}return a}function L(a,b){return Math.floor(Math.random()*(b-a+1))+a}function M(a){var b=window.crypto||window.msCrypto,c;if(b)c=new Int8Array(a),b.getRandomValues(c);else{c=[];for(b=0;b<a;b++)c.push(L(0,N))}a=[];for(b=0;b<c.length;b++){var d=Math.abs(c[b]%N),d=9>=d?String.fromCharCode(d+48):String.fromCharCode(d+55);a.push(d)}return a.join("")}function O(a){return document.getElementsByTagName(a)}
+function P(a){var b=a.length;if("number"===typeof b)a=b;else{for(var b=0,c=2048;a[c-1];)b=c,c+=c;for(var d=7;1<c-b;)d=(c+b)/2,a[d-1]?b=d:c=d;a=a[d]?c:b}return a}function ca(){var a=d.csu,a=(a.indexOf("dbg")==a.length-3?a.substr(0,a.length-3):a)+"_"+d.app+"_Store";try{if(x){var b=x.getItem(a);if(b){for(var a={},c=b.split("|"),b=0;b<c.length;b++){var e=c[b].split("=");2==e.length&&(a[e[0]]=decodeURIComponent(e[1]))}if(!d.lastModification||parseInt(a.lastModification.substr(0,13),10)>=parseInt(d.lastModification.substr(0,
+13),10))for(var f in a)a.hasOwnProperty(f)&&("config"==f?y(a[f]):d[f]=a[f])}}}catch(g){}}function y(a){a=a.split("|");for(var b=0;b<a.length;b++){var c=m(a[b],"=");-1===c?d[a[b]]="1":d[a[b].substring(0,c)]=a[b].substring(c+1,a[b].length)}}function da(a,b){if(a){var c=/([a-zA-Z]*)[0-9]{0,3}_[a-zA-Z_0-9]*_[0-9]+/g.exec(a);if(c&&c.length){var k=c[0];d.csu=c[1];c=k.split("_");d.legacy="1";d.featureHash=c[1];d.dtVersion=e.version[0]+""+e.version[1]}}b&&y(b);c=location.hostname;k=d.domain;c=c&&k?c==k||
+-1!==c.indexOf("."+k,c.length-("."+k).length)?!0:!1:!0;c||(delete d.domain,d.domainOverride="true")}function ea(){return J}function fa(){return ga}function ha(){return ia}function z(a){d[a]=0>m(d[a],"#"+a.toUpperCase())?d[a]:""}function ja(){return s}function Q(a){for(var b=R(),c=!1,d=0;d<b.length;d++)b[d].frameId===s&&(b[d].actionId=a,c=!0);c||l(b,{frameId:s,actionId:a});S(b)}function S(a,b){var c="";if(a){for(var c=[],d=0;d<a.length;d++)0<d&&0<c.length&&l(c,"p"),l(c,a[d].frameId),l(c,"h"),l(c,a[d].actionId);
+c=c.join("")}c||(c="-");w(A,c)}function R(a){var b=q(A),c=[];if(b&&"-"!==b)for(var b=b.split("p"),d=0;d<b.length;d++){var e=b[d].split("h");if(2===e.length&&e[0]&&e[1]){var f=e[0],g;if(!(g=a)){g=f.split("_");g=u(g[0]);var h=r()%B;h<g&&(h+=B);g=g+9E5>h}g&&l(c,{frameId:f,actionId:e[1]})}}return c}function T(){var a=q(t);if(!a||""==a||a.length&&a.length!=U)a=D(t),a&&a.length==U||(V=!0,a=r()+M(ka));var b=a,c=new Date;c.setFullYear(c.getFullYear()+2);w(t,b,c);E(t,b);return a}function la(){return V}var f=
+window;if(!f.dT_||!f.dT_.cfg||"string"!=typeof f.dT_.cfg||f.dT_.initialized)f.console&&f.console.log("Initconfig not found or agent already initialized! This is an injection issue.");else{var Z=window.setTimeout,v=window.sessionStorage,e={version:[6,5,0,"1289"],cfg:window.dT_&&window.dT_.cfg,ica:1};e.version[3]=parseInt(e.version[3],10);window.dT_=e;e.agentStartTime=r();e.nw=r;e.apush=l;e.st=Y;var N=32,$={"!":"%21","~":"%7E","*":"%2A","(":"%28",")":"%29","'":"%27",$:"%24",";":"%3B",",":"%2C"};e.gSSV=
+D;e.sSSV=E;e.pn=u;e.iVSC=H;e.io=m;e.dC=F;e.sC=w;e.esc=G;e.gSId=aa;e.gDtc=ba;e.gSC=I;e.gC=q;e.cRN=L;e.cRS=M;e.gEL=P;e.gEBTN=O;var d={reportUrl:"dynaTraceMonitor",initializedModules:"",csu:"dtagent",domainOverride:"false",dataDtConfig:e.cfg},x;try{x=window.localStorage}catch(ma){}if(-1==m(d.dataDtConfig,"#CONFIGSTRING")&&(y(d.dataDtConfig),z("domain"),z("auto"),z("app"),(f=d.agentUri)&&-1<m(f,"_")))f=/([a-zA-Z0-9]*)[0-9]*_([a-zA-Z0-9]*)_[0-9]*/.exec(f),d.csu=f[1],d.featureHash=f[2],d.dtVersion=e.version[0]+
+""+e.version[1];var f=O("script"),W=P(f);if(0<W)for(var h,X=d.csu+"_bootstrap.js",C=0;C<W;C++)if(h=f[C],h.attributes){var n=h.attributes.getNamedItem("data-dtconfig");h=h.src;if(n){da(h,n.value);break}if((n=h&&h.indexOf(X))&&0<=n)n=n+X.length+5,d.app=h.length>n?h.substr(n):"Default%20Application"}ca();try{var g=d.ign;if(g&&RegExp(g).test(window.location.href)){document.dT_=window.dT_=null;return}}catch(na){}var A="dtPC",J="dtCookie",ga="x-dtPC",ia="x-dtReferer";e.gSCN=ea;e.gPCHN=fa;e.gRHN=ha;e.pageContextCookieName=
+A;e.latencyCookieName="dtLatC";e.cfg=d;var B=6E8,s=e.agentStartTime%B+"_"+u(1E3*Math.random());e.gFId=ja;e.frameId=s;Q(1);e.gPC=R;e.cPC=Q;e.sPC=S;var p;try{p=v.getItem("dtDisabled")}catch(oa){}!d.auto&&(!d.legacy&&!p)&&(g=d.agentname||d.csu||"dtagent",g=q("dtUseDebugAgent")?d.debugName||g+"dbg":d.name||g,p=d.agentUri||d.agentLocation+"/"+g+"_"+d.featureHash+"_"+d.buildNumber,d.async?(g=document.createElement("script"),g.setAttribute("src",p),d.async&&g.setAttribute("defer","true"),g.setAttribute("crossorigin",
+"anonymous"),p=document.getElementsByTagName("script")[0],p.parentElement.insertBefore(g,p)):document.write('<script type="text/javascript" src="'+p+'">\x3c/script>'));var t="rxVisitor",ka=32,U=45,V=!1;T();e.iNV=la;e.gVID=T}})();
+</script><script type="text/javascript" src="dt/dtagent_23deijmopqrstvx_6000500001289.js"></script><script type='text/javascript' src="https://extranetperu.grupobbva.pe/SimuladorWeb1/resources/js/jquery-1.8.3.js"></script>
+	<script type="text/javascript" src="https://extranetperu.grupobbva.pe/SimuladorWeb1/resources/js/jquery/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="https://extranetperu.grupobbva.pe/SimuladorWeb1/resources/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="https://extranetperu.grupobbva.pe/SimuladorWeb1/resources/js/form-emerge.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://extranetperu.grupobbva.pe/SimuladorWeb1/resources/css/form-emerge.css"/>
+	<link rel="stylesheet" type="text/css" href="https://extranetperu.grupobbva.pe/SimuladorWeb1/resources/css/jquery-ui.css"/>
+	<!-- carga de js -->
+	<script type="text/javascript">
+	
+	$(function(){
+    	$("#wMensaje").dialog({
+    		open: function(event, ui) { $(".ui-dialog-titlebar-close").hide(); },
+    		resizable: false,
+    		draggable: false,
+    		autoOpen: false,
+    		height: 180,
+    		width: 400,
+    		modal: true,
+    		buttons: {
+    			"Aceptar": function(){
+    				$(this).dialog("close");
+    				
+    				var dialogs = $('.ui-dialog');
+    				var cdialogs = 0;
+    				$.each(dialogs,function(i,e){
+    					if($(e).is(':visible')){
+    						cdialogs++;
+    					}
+    				});
+    				if(cdialogs==0){
+    					$('.overlay').fadeOut(250);
+    				}
+    			}
+    		}
+    	});
+    	
+    });
+    function showMensaje(texto){
+    	if($('.overlay').is(':visible')){
+    		$("#wMensaje .texto").text(texto);
+    		$("#wMensaje").dialog("open");    		
+    	}else{
+    		$('.overlay').fadeIn(250,function(){
+	    		$("#wMensaje .texto").text(texto);
+    			$("#wMensaje").dialog("open");
+    		});
+    	}	
+
+    }	
+    $(document).keydown(function(e) {
+	    if (e.keyCode == 27) return false;
+	});	
+</script> 
+	<script src="https://extranetperu.grupobbva.pe/SimuladorWeb1/resources/js/pantallaDinamicaDeConsumo.js" type="text/javascript"></script>
+  	<!-- <script src="/SimuladorWeb/js/pantallaDinamicaDeConsumo.js" type="text/javascript"></script> -->
+  	<!-- Se carga la hoja de estilos general -->
+  	<link rel="stylesheet" href="css/general.css" type="text/css" />
+  	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />  	
+  	<!-- El resto de hojas de estilo se cargan de manera dinamica -->
+  	<style type="text/css">
+  		.ui-spinner {
+			/*width:96px;
+  			height:16px;
+			font-family:Arial, Helvetica, sans-serif;
+			font-size:13px;
+			color:#989898;
+			border-color: #467BBA;
+			border-bottom-right-radius: 0px;
+			border-top-right-radius: 0px;
+			border-bottom-left-radius: 0px;
+			border-top-left-radius: 0px;*/
+			/*margin-left: 10px;*/
+  		}
+  		.ui-spinner input{
+			margin-left: 0px;
+  		}
+  		.ui-state-default {
+			border-bottom-right-radius: 0px;
+			border-top-right-radius: 0px;
+			border-bottom-left-radius: 0px;
+			border-top-left-radius: 0px;
+  		}
+  		.ui-widget {
+		    font-size: 12px;
+		}
+		.ui-datepicker{
+			font-size: 10px;
+		}
+  		.contenedorCuotaAdic .ui-spinner{
+  			width:48px;
+  			height:18px;
+  			font-size:11px;
+  		}
+  		.error_input_dinamico{
+  			border-color: red !important;
+  		}
+  		input[type=checkbox],input[type=radio],select.input_dinamico{
+  			/*margin-left: 10px;*/
+  		}
+  		select.input_dinamico{
+  			/*color: #989898;
+    		font-family: Arial,Helvetica,sans-serif;
+    		font-size: 13px;*/
+    		width: 180px;
+  		}
+  		.input_dinamico_radio,.label_dinamico{
+			padding:0px !important;
+  			margin: 0px 3px !important;
+  			float: left;
+  			height:25px;
+  			line-height:25px;
+  		}
+  		
+		.stylecaptcha1
+		{
+			border-left-style:solid;
+			border-right-style:solid;
+			border-left-width:8px;
+			border-right-width:8px;
+			border-color:#C0C0C0 #000000 #C0C0C0 #000000;
+			width:80px;
+		}
+		.stylecaptcha2
+		{
+			 font-size:25px;
+			 color:#000000;
+			 font-family:"Monospaced";
+			 font-weight:bold;
+			 border-color:#C0C0C0 #000000 #C0C0C0 #000000;
+			 width:80px;
+			 background-color:#C0C0C0;
+		}
+  	</style>
+</head>
+
+<body>
+<center>	
+
+<div style="width: 1024px; position: relative; margin-left: auto; margin-right: auto; height:100%; ">
+	<div class="head">
+        <div class="sub_head_left">
+        	<img src="https://extranetperu.grupobbva.pe/SimuladorWeb1/resources/img/logo.jpg" width="223" height="60"/>
+			<div class="time">
+				<div class="tc1_12"><b>Fecha : 21/04/2018</b></div>
+				<div class="tc1_12"><b>Hora : 06:17:14</b></div>
+			</div>	
+        </div>
+        <div class="sub_head_right">
+			<div id="nombreProducto">Simulador de Pr&eacute;stamos</div>
+		</div>
+	</div>
+    
+    <!-- FORMULARIO -->
+    <div class="body">      
+      <form name="formSimulador" id="formSimulador">
+   	  <div class="body_head"><b>Préstamo De Consumo</b></div>
+        <div class="body_container" style="/*padding-top: 15px;*/">	
+        	<input type="hidden" name="casoSimulacion" id="casoSimulacion" value="0"/>
+        	<!-- rangos -->
+        	<input type="hidden" name="cdSubProd" id="cdSubProd" class="datoValidador" value="0"/>
+        	<input type="hidden" name="cdTipoCuota" id="cdTipoCuota" class="datoValidador" value="0"/>
+        	<input type="hidden" name="pcTasaMinima" id="pcTasaMinima" class="datoValidador" value="0"/>
+        	<input type="hidden" name="pcTasaMaxima" id="pcTasaMaxima" class="datoValidador" value="0"/>
+        	<input type="hidden" name="pcValPizarra" id="pcValPizarra" class="datoValidador" value="0"/>
+        	<input type="hidden" name="nuPlazoMin" id="nuPlazoMin" class="datoValidador" value="0"/>
+        	<input type="hidden" name="nuPlazoMax" id="nuPlazoMax" class="datoValidador" value="0"/>
+        	<input type="hidden" name="imImpMinimo" id="imImpMinimo" class="datoValidador" value="0"/>
+        	<input type="hidden" name="imImpMaximo" id="imImpMaximo" class="datoValidador" value="0"/>        	
+        	<input type="hidden" name="nuMaxCuotAdi" id="nuMaxCuotAdi" class="datoValidador" value="0"/> 
+        	<input type="hidden" name="flInclDatoHost" id="flInclDatoHost" class="datoValidador" value="0"/>
+        	<input type="hidden" name="tpModVisDatHst" id="tpModVisDatHst" class="datoValidador" value="0"/>
+        	<input type="hidden" name="txMensajeAyuda" id="txMensajeAyuda" class="datoValidador" value="0"/>
+        	<input type="hidden" name="flagContinuar" id="flagContinuar" value="0"/>     
+        	<input type="hidden" name="cuotaReducida" id="cuotaReducida" value="0"/>
+        	<input type="hidden" name="descProducto" id="descProducto" value=""/>
+        	<input type="hidden" name="codSubGrupo" id="codSubGrupo" value=""/>
+        	<!-- agregado x mejoras -->
+        	<input type="hidden" name="fechaServidor" id="fechaServidor" value="21/04/2018"/>
+        	<input type="hidden" name="codFechaSolicitud" id="codFechaSolicitud" value=""/>
+        	<input type="hidden" name="codPrimaDesgravamen" id="codPrimaDesgravamen" value=""/>
+        	<input type="hidden" name="indMontoInicialPrimaD" id="indMontoInicialPrimaD" value=""/>
+        	<input type="hidden" name="indMontoInicialMancomunadoPrimaD" id="indMontoInicialMancomunadoPrimaD" value=""/>
+        	<input type="hidden" name="indMontoInsolutoIndividualPrimaD" id="indMontoInsolutoIndividualPrimaD" value=""/>
+        	<input type="hidden" name="indMontoInsolutoMancomunadoPrimaD" id="indMontoInsolutoMancomunadoPrimaD" value=""/>
+        	<input type="hidden" name="indSinSeguroPrimaD" id="indSinSeguroPrimaD" value=""/>
+        	<input type="hidden" name="codFechaNacPrimerTitular" id="codFechaNacPrimerTitular" value=""/>
+        	<input type="hidden" name="codFechaNacSegundoTitular" id="codFechaNacSegundoTitular" value=""/>
+        	<input type="hidden" name="indicador" id="indicador" value=""/>
+        	<!-- fin -->
+        	
+        	<!-- TABLA DE CRITERIOS -->     	
+        	<table width="900" border="0" cellpadding="0" cellspacing="0" class="table">
+				<tr> 
+                    <td class="td_left celda_arriba">&iquest;Qu&eacute; producto desea consultar?</td>
+                    <td class="td_right_col2 celda_arriba">
+                   		<select name="selectProducto" id="selectProducto" class="datoEntrada imput_cbobox_max2" style="/*padding:0 0 0 2px;*/">
+                        
+                        </select>
+                    </td>
+				</tr>
+				<tr>
+                    <td class="td_left">&iquest;Cu&aacute;nto deseas solicitar?</td>
+                    <td class="td_right_col2">
+                      <input type="text" name="inputImporte" id="inputImporte" class="datoEntrada imput_text_medium" maxlength="16"/>
+                      <select name="selectMoneda" id="selectMoneda" class="datoEntrada imput_cbobox_min2" style="/*padding:0 0 0 2px;*/">
+                      
+                      </select>
+                    </td>
+				</tr>
+					<tr id="filaCuota" >
+	                    <td class="celdaCuota td_left">&iquest;Solicitar&aacute; cuotas adicionales?</td>
+	                    <td class="celdaCuota td_right_col2">
+	                      	<input type="checkbox" name="checkboxCuota" id="checkboxCuota" class="datoEntrada"/>
+	                      	<input type="hidden" name="cuotaAdic_12" id="cuotaAdic_12" value="0"/>
+	                      	<input type="hidden" name="totalCuotasAdic" id="totalCuotasAdic" value="0"/>
+	                      	<input type="hidden" name="cuotaAdic_01" id="cuotaAdic_01" value="0"/>
+							<input type="hidden" name="cuotaAdic_02" id="cuotaAdic_02" value="0"/>
+							<input type="hidden" name="cuotaAdic_03" id="cuotaAdic_03" value="0"/>
+							<input type="hidden" name="cuotaAdic_04" id="cuotaAdic_04" value="0"/>
+							<input type="hidden" name="cuotaAdic_05" id="cuotaAdic_05" value="0"/>
+							<input type="hidden" name="cuotaAdic_06" id="cuotaAdic_06" value="0"/>
+							<input type="hidden" name="cuotaAdic_07" id="cuotaAdic_07" value="0"/>
+							<input type="hidden" name="cuotaAdic_08" id="cuotaAdic_08" value="0"/>
+							<input type="hidden" name="cuotaAdic_09" id="cuotaAdic_09" value="0"/>
+							<input type="hidden" name="cuotaAdic_10" id="cuotaAdic_10" value="0"/>
+							<input type="hidden" name="cuotaAdic_11" id="cuotaAdic_11" value="0"/>
+							<input type="hidden" name="cuotaAdic_12" id="cuotaAdic_12" value="0"/>
+	                    </td>
+					</tr>
+				
+					<tr id="filaMeses" >
+	                    <td class="td_left">&iquest;Por cu&aacute;nto tiempo?</td>
+	                    <td class="td_right_col2">
+		                    <input type="text" name="inputTiempo" id="inputTiempo"  class="datoEntradaExtra imput_text_medium" maxlength="3" min="1" max="360" value=""/>&nbsp;&nbsp;&nbsp;Meses
+		                    <a class="ic ic_info_tt" id="tooltip_tiempo"></a>
+							<!--<a href="#" id="tooltip_tiempo"> <img src="/SimuladorWeb/img/Ayuda.png" width="20" height="20"/></a>-->
+							<div id="tooltipTiempo" class="tooltip tooltipTiempo"><p>El plazo de un préstamo, indica el tiempo que nos tomará cancelar el préstamo</p></div>
+						</td>
+					</tr>
+					<tr id="filaTasa" > 
+	                    <td class="td_left">&iquest;A qu&eacute; tasa?</td>
+	                    <td class="td_right_col2">
+							<input type="text" name="inputTasa" id="inputTasa"  class="datoEntradaExtra imput_text_medium"  maxlength="6" min="0.00" max="100.00"/>&nbsp;&nbsp;&nbsp;%
+							<a class="ic ic_info_tt" id="tooltip_tasa"></a>
+							<!--<a href="#" id="tooltip_tasa"> <img src="/SimuladorWeb/img/Ayuda.png" width="20" height="20"/></a>-->
+							<div id="tooltipTasa" class="tooltip tooltipTasa"></div>
+						</td>
+					</tr>
+            </table>
+            
+			<table width="100%" cellpadding="0" cellspacing="0" border="0">
+            <tr>
+                <td colspan="2" class="center">
+					<div class="button_center" id="btnContinuar">Continuar</div>
+					<div class="button_center" id="btnLimpiar">Limpiar</div>
+                </td>
+            </tr>
+            </table>  
+            
+            <br/>            
+            <!-- FIN TABLA DE CRITERIOS --> 
+            
+            <!-- TABLA DE RESULTADO -
+            <table id="pnProducto" width="900" border="0" cellpadding="0" cellspacing="0" style="margin:20px 0 0 0;" class="table">
+				<tr>
+					<td>
+						<div id="definicionPantallaDinamica">
+													
+						</div>
+					</td>
+				</tr>
+			</table>
+			-->
+			<div id="definicionPantallaDinamica" style="border-bottom:1px solid #E7E7E7;border-top:1px solid #E7E7E7;">
+										
+			</div>
+			<!-- agregado por mejoras -->
+			<div id="datoObligatorio" style="padding-top: 10px; width: auto">
+			<table class="table" width="900" cellspacing="0" cellpadding="0" border="0">
+				<tbody>
+					<tr>
+						<td class="td_left">(*) Dato Obligatorio</td>
+						<td class="td_right_col2"></td>
+					</tr>
+				</tbody>
+			</table>					
+			</div>			
+			<!-- fin -->
+			<br/>
+			<div id="pnCaptchaProducto">
+				<table width="100%" align="center" cellpadding="0" cellspacing="0" border="0">
+           		<tr>
+	                <td colspan="2" class="center">
+	                	<div class="button" id="btnAdicionales" onclick="editarCuotasAdicionales();" >Cuotas Adicionales</div>
+	                </td>
+            	</tr>
+            	</table>
+            	
+				<div class="msg msg_adv" style="width:500px;">
+					<span class="icm icm_code"></span>
+					<div class="center">
+						<p class="tc1_12">Ingrese el Texto de la Imagen Adjunta:</p>
+						<input type="text" name="txtCaptcha" id="txtCaptcha" class="imput_text_medium" maxlength="6" style="text-transform: lowercase;" />
+					</div>
+					<table align="center" style="margin-top:20px;">
+					<tr>
+						<td><div id="CaptchaImg"></div></td>
+					</tr>
+					</table>
+				</div>
+				
+				<table width="100%" align="center" cellpadding="0" cellspacing="0" border="0">
+           		<tr>
+	                <td colspan="2" class="center">
+						<div id="btnEjecutar" class="button">Ejecutar</div>
+	                </td>
+            	</tr>
+            	</table> 
+				
+			</div>
+			
+       		<!--<table id="pnCaptchaProducto" width="900" border="0" cellpadding="0" cellspacing="0" style="margin:20px 0 0 0;" class="table">
+				<tr>
+					<td width="250" align="left" style="padding:0 0 0 20px;">Ingrese el Texto de la Imagen Adjunta:</td>
+					<td width="151" align="left">
+					  <input type="text" name="txtCaptcha" id="txtCaptcha" class="imput_text_medium" maxlength="6" style="text-transform: lowercase;" />
+						
+					</td>
+					<td width="190" align="left">
+						<div id="CaptchaImg">
+														
+						</div>
+					</td>
+					<td width="177" align="left">
+						<div class="button" style="margin:2px" id="btnAdicionales" onclick="editarCuotasAdicionales();" >C. Adicional</div> 
+						<div id="btnEjecutar" class="button" style="margin:2px">Ejecutar</div>
+					</td>
+				</tr>
+			</table>-->
+			 <!-- FIN TABLA DE RESULTADO --> 
+      	</div>
+      </form>
+    </div>
+    <!-- FIN FORMULARIO -->       
+    
+    <!-- modal de mensajes -->
+    <div id="wMensaje" title="<div class='modal_title'>Mensaje</div><hr/>">
+			<span class="texto"></span>
+	</div> 
+	<!-- fin modal de mensajes -->
+</div>
+
+<!-- Modal Seleccionar Cuotas adicionales -->
+<div id="simuladorCuotaAdicContenedor">
+<form  name="simuladorFormCuotaAdicional" id="simuladorFormCuotaAdicional">
+	<input type="hidden" name="actualCuotasAdic" id="actualCuotasAdic" value="0"/>
+	<input type="hidden" name="actualPrevioCuotasAdic" id="actualPrevioCuotasAdic" value="0"/>
+	<input type="hidden" name="valorPrevioCuotaAdic" id="valorPrevioCuotaAdic" value="0"/>
+	<!-- valores ingresados y aceptados -->
+	<input type="hidden" name="previaCuotaAdic_01" id="previaCuotaAdic_01" class="previaCuotaAdic" value="0"/>
+	<input type="hidden" name="previaCuotaAdic_02" id="previaCuotaAdic_02" class="previaCuotaAdic" value="0"/>
+	<input type="hidden" name="previaCuotaAdic_03" id="previaCuotaAdic_03" class="previaCuotaAdic" value="0"/>
+	<input type="hidden" name="previaCuotaAdic_04" id="previaCuotaAdic_04" class="previaCuotaAdic" value="0"/>
+	<input type="hidden" name="previaCuotaAdic_05" id="previaCuotaAdic_05" class="previaCuotaAdic" value="0"/>
+	<input type="hidden" name="previaCuotaAdic_06" id="previaCuotaAdic_06" class="previaCuotaAdic" value="0"/>
+	<input type="hidden" name="previaCuotaAdic_07" id="previaCuotaAdic_07" class="previaCuotaAdic" value="0"/>
+	<input type="hidden" name="previaCuotaAdic_08" id="previaCuotaAdic_08" class="previaCuotaAdic" value="0"/>
+	<input type="hidden" name="previaCuotaAdic_09" id="previaCuotaAdic_09" class="previaCuotaAdic" value="0"/>
+	<input type="hidden" name="previaCuotaAdic_10" id="previaCuotaAdic_10" class="previaCuotaAdic" value="0"/>
+	<input type="hidden" name="previaCuotaAdic_11" id="previaCuotaAdic_11" class="previaCuotaAdic" value="0"/>
+	<input type="hidden" name="previaCuotaAdic_12" id="previaCuotaAdic_12" class="previaCuotaAdic" value="0"/>
+	
+	<table width="100%" border="0" cellpadding="0" cellspacing="0" class="table" style="border:none;">
+         <tr>
+         	<td class="td_right_col3">   
+         		<table border="0" align="center" cellpadding="0" cellspacing="0">
+                   <tr>
+                     <td class="td_left_col2">
+                     	<b>Enero</b>
+                     </td>
+                     <td class="td_left_col2 td_cb">
+                     	<input type="checkbox" name="flagCuotaAdic_01" id="flagCuotaAdic_01" class="flagCuotaAdic"/>
+                     </td>
+                     <td class="td_left_col2 w100">
+                     	<div id="contenedorCuotaAdic_01" class="contenedorCuotaAdic" >
+                     		<input type="text" name="cantCuotasAdic_01" id="cantCuotasAdic_01" class="spinnerCuotaAdic imput_text_min_cuota_cuota" maxlength="3" min="1" max="360" value=""/>
+                     	</div>
+                     </td>
+                     <td class="td_left_col2">
+                     	<b>Julio</b>
+                     </td>
+                     <td class="td_left_col2 td_cb">	
+                     	<input type="checkbox" name="flagCuotaAdic_07" id="flagCuotaAdic_07" class="flagCuotaAdic"/>
+	                 </td>
+                     <td class="td_left_col2 w100">	
+                     	<div id="contenedorCuotaAdic_07" class="contenedorCuotaAdic" >
+                     		<input type="text" name="cantCuotasAdic_07" id="cantCuotasAdic_07" class="spinnerCuotaAdic imput_text_min_cuota_cuota" maxlength="3" min="1" max="360" value=""/>
+                     	</div>
+                     </td>   
+                   </tr>
+                   <tr>
+                     <td class="td_left_col2">
+                     	<b>Febrero</b>
+                     </td>
+                     <td class="td_left_col2 td_cb">	
+                     	<input type="checkbox" name="flagCuotaAdic_02" id="flagCuotaAdic_02" class="flagCuotaAdic"/>
+                     </td>
+                     <td class="td_left_col2 w100">	
+                     	<div id="contenedorCuotaAdic_02" class="contenedorCuotaAdic" >
+                     	 	<input type="text" name="cantCuotasAdic_02" id="cantCuotasAdic_02" class="spinnerCuotaAdic imput_text_min_cuota_cuota" maxlength="3" min="1" max="360" value=""/>
+                     	</div>
+                     </td> 
+                     <td class="td_left_col2">
+                     	<b>Agosto</b>
+                     </td>
+                     <td class="td_left_col2 td_cb">	
+                     	<input type="checkbox" name="flagCuotaAdic_08" id="flagCuotaAdic_08" class="flagCuotaAdic"/>
+                     </td>
+                     <td class="td_left_col2 w100">	
+                     	<div id="contenedorCuotaAdic_08" class="contenedorCuotaAdic" >
+                     		<input type="text" name="cantCuotasAdic_08" id="cantCuotasAdic_08" class="spinnerCuotaAdic imput_text_min_cuota_cuota" maxlength="3" min="1" max="360" value=""/>
+                     	</div>
+                     </td>  
+                   </tr>
+                   <tr>
+                     <td class="td_left_col2">
+                     	<b>Marzo</b>
+                     </td>
+                     <td class="td_left_col2 td_cb">	
+                     	<input type="checkbox" name="flagCuotaAdic_03" id="flagCuotaAdic_03" class="flagCuotaAdic"/>
+                     </td>
+                     <td class="td_left_col2 w100">	
+                     	<div id="contenedorCuotaAdic_03" class="contenedorCuotaAdic" >
+                     		<input type="text" name="cantCuotasAdic_03" id="cantCuotasAdic_03" class="spinnerCuotaAdic imput_text_min_cuota_cuota" maxlength="3" min="1" max="360" value=""/>
+                     	</div>
+                     </td>
+                     <td class="td_left_col2">
+                     	<b>Septiembre</b>
+                     </td>
+                     <td class="td_left_col2 td_cb">	
+                     	<input type="checkbox" name="flagCuotaAdic_09" id="flagCuotaAdic_09" class="flagCuotaAdic"/>
+                     </td>
+                     <td class="td_left_col2 w100">	
+                     	<div id="contenedorCuotaAdic_09" class="contenedorCuotaAdic" >
+                     		<input type="text" name="cantCuotasAdic_09" id="cantCuotasAdic_09" class="spinnerCuotaAdic imput_text_min_cuota_cuota" maxlength="3" min="1" max="360" value=""/>
+                     	</div>
+                     </td>
+                   </tr>
+                   <tr>
+                     <td class="td_left_col2">
+                     	<b>Abril</b>
+                     </td>
+                     <td class="td_left_col2 td_cb">	
+                     	<input type="checkbox" name="flagCuotaAdic_04" id="flagCuotaAdic_04" class="flagCuotaAdic"/>
+                     </td>
+                     <td class="td_left_col2 w100">	
+                     	<div id="contenedorCuotaAdic_04" class="contenedorCuotaAdic" >
+                     		<input type="text" name="cantCuotasAdic_04" id="cantCuotasAdic_04" class="spinnerCuotaAdic imput_text_min_cuota_cuota" maxlength="3" min="1" max="360" value=""/>
+                     	</div>
+                     </td>
+                     <td class="td_left_col2">
+                     	<b>Octubre</b>
+                     </td>
+                     <td class="td_left_col2 td_cb">	
+                     	<input type="checkbox" name="flagCuotaAdic_10" id="flagCuotaAdic_10" class="flagCuotaAdic"/>
+                     </td>
+                     <td class="td_left_col2 w100">	
+                     	<div id="contenedorCuotaAdic_10" class="contenedorCuotaAdic" >
+                     		<input type="text" name="cantCuotasAdic_10" id="cantCuotasAdic_10" class="spinnerCuotaAdic imput_text_min_cuota_cuota" maxlength="3" min="1" max="360" value=""/>
+                     	</div>
+                     </td>  
+                   </tr>
+                   <tr>
+                     <td class="td_left_col2">
+                     	<b>Mayo</b>
+                     </td>
+                     <td class="td_left_col2 td_cb">	
+                     	<input type="checkbox" name="flagCuotaAdic_05" id="flagCuotaAdic_05" class="flagCuotaAdic"/>
+                     </td>
+                     <td class="td_left_col2 w100">	
+                     	<div id="contenedorCuotaAdic_05" class="contenedorCuotaAdic" >
+                     		<input type="text" name="cantCuotasAdic_05" id="cantCuotasAdic_05" class="spinnerCuotaAdic imput_text_min_cuota_cuota" maxlength="3" min="1" max="360" value=""/>
+                     	</div>
+                     </td>
+                     <td class="td_left_col2">
+                     	<b>Noviembre</b>
+                     </td>
+                     <td class="td_left_col2 td_cb">	
+                     	<input type="checkbox" name="flagCuotaAdic_11" id="flagCuotaAdic_11" class="flagCuotaAdic"/>
+                     </td>
+                     <td class="td_left_col2 w100">	
+                     	<div id="contenedorCuotaAdic_11" class="contenedorCuotaAdic">
+                     		<input type="text" name="cantCuotasAdic_11" id="cantCuotasAdic_11" class="spinnerCuotaAdic imput_text_min_cuota_cuota" maxlength="3" min="1" max="360" value=""/>
+                     	</div>
+                     </td> 
+                   </tr>
+                   <tr>
+                     <td class="td_left_col2">
+                     	<b>Junio</b>
+                     </td>
+                     <td class="td_left_col2 td_cb">	
+                     	<input type="checkbox" name="flagCuotaAdic_06" id="flagCuotaAdic_06" class="flagCuotaAdic"/>
+                     </td>
+                     <td class="td_left_col2 w100">	
+                     	<div id="contenedorCuotaAdic_06" class="contenedorCuotaAdic" >
+                     		<input type="text" name="cantCuotasAdic_06" id="cantCuotasAdic_06" class="spinnerCuotaAdic imput_text_min_cuota_cuota" maxlength="3" min="1" max="360" value=""/>
+                     	</div>
+                     </td>
+                     <td class="td_left_col2">
+                     	<b>Diciembre</b>
+                     </td>
+                     <td class="td_left_col2 td_cb">	
+                     	<input type="checkbox" name="flagCuotaAdic_12" id="flagCuotaAdic_12" class="flagCuotaAdic"/>
+                     </td>
+                     <td class="td_left_col2 w100">	
+                     	<div id="contenedorCuotaAdic_12" class="contenedorCuotaAdic" >
+                     		<input type="text" name="cantCuotasAdic_12" id="cantCuotasAdic_12" class="spinnerCuotaAdic imput_text_min_cuota_cuota" maxlength="3" min="1" max="360" value=""/>
+                     	</div>
+                     </td>   
+                   </tr>
+                 </table>
+         	</td>
+         </tr>
+	</table>
+         <!-- botonera -->
+                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                        <td class="center">
+                              <div class="button_center" id="btnAceptarCuotasAdic">Aceptar</div>
+                              <div class="button_center" id="btnSalirCuotasAdic">Salir</div>
+                        </td>
+                    </tr>
+                </table>
+                         <!-- fin botonera -->	
+</form>
+</div>
+ <!-- Fin Modal Seleccionar Cuotas adicionales -->
+ 
+ 
+
+<!-- Modal Opción Cuotas Reducidas -->
+<div id="simuladorCuotaReducidaContenedor">
+<form  name="simuladorFormCuotaReducida" id="simuladorFormCuotaReducida">
+	<table width="100%" border="0" cellpadding="0" cellspacing="0" class="table" style="border:none;">
+         <tr>
+         	<td class="td_right_col3">   
+         		<table border="0" align="center" cellpadding="0" cellspacing="0">
+                   <tr>
+                     <td>
+                     	¿Desea que se muestre cronograma reducido?
+                     </td> 
+                   </tr>
+                   <tr>
+                     <td>
+                     	<div style="text-align:center; margin:auto;">
+                            <div class="button_center" style="margin:10px; float: left" onclick="invocarEjecutarConsulta(1)" id="btnSiCuotasReducidas">Si</div>
+                            <div class="button_center" style="margin:10px; float: left" onclick="invocarEjecutarConsulta(0)" id="btnNoCuotasReducidas">No</div>
+                        </div>
+                     </td> 
+                   </tr>
+                 </table>
+         	</td>
+         </tr>
+	</table>
+</form>
+</div>
+ <!-- Fin Modal Opción Cuotas Reducidas -->
+
+</center>   
+<div class="overlay"></div>
+</body>
+</html>
